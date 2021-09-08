@@ -15,6 +15,7 @@ public class Main {
 
     ShowRoom showRoom = new ShowRoom();
     Scanner scanner = new Scanner(System.in);
+    Scanner intScanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         Main main = new Main();
@@ -94,7 +95,6 @@ public class Main {
     }
 
     void  viewSingleCar() {
-        Scanner intScanner = new Scanner(System.in);
         System.out.println("View Car\n");
         System.out.println("Please provide the car ID");
         int carId = intScanner.nextInt();
@@ -110,7 +110,7 @@ public class Main {
 
         System.out.println("Remove Car\n");
         System.out.println("Please provide the car ID");
-        int carId = scanner.nextInt();
+        int carId = intScanner.nextInt();
 
         String message = showRoom.removeCar(carId);
         System.out.println(message);
